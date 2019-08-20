@@ -1,0 +1,139 @@
+.item {
+  color: #858585;
+  font-size: 20px;
+  text-align: center;
+
+  &__favorite {
+    background: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+  }
+
+  &__favorite-input {
+    display: none;
+
+    &:not(:checked) {
+      ~ .item__favorite-icon {
+        fill: #4e4e4e;
+      }
+    }
+  }
+
+  &__favorite-icon {
+    display: block;
+    fill: #ee8d38;
+    height: 50px;
+    width: 50px;
+  }
+
+  &__content {
+    background: #fff;
+    border-radius: 60px;
+    padding: 40px 0;
+    width: 100%;
+  }
+
+  &__date {
+    padding: 20px;
+  }
+
+  &__route {
+    padding: 30px;
+  }
+
+  &__route-icon {
+    height: 40px;
+    fill: #ee8d38;
+    width: 100%;
+  }
+
+  &__send-icon {
+    height: 40px;
+    fill: currentColor;
+    width: 100%;
+  }
+
+  &__price {
+    padding: 30px; 
+  }
+
+  &__price-amount {
+    font-size: 40px;
+    padding: 10px;
+  }
+
+  &__price-icon {
+    fill: #858585;
+    height: 100px;
+    transform: scaleX(-1);
+    width: 100px;
+  }
+
+  &__amount {
+    align-self: center;
+    background: #ed5356;
+    border-radius: 10px;
+    color: #fff;
+    display: inline-block;
+    font-size: .75em;
+    padding: 20px 25px;
+    width: min-content;
+  }
+
+  &__actions {
+    box-shadow: none;
+  }
+
+  &__actions-icon {
+    height: 30px;
+    width: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    align-items: center;
+    display: flex;
+
+    &__date, &__route {
+      border-right: 1px solid #858585;
+    }
+
+    &__date {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 150px;
+    }
+
+    &__content {
+      display: flex;
+      margin-left: 30px;
+      padding: 40px 20px;
+    }
+
+    &__route {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 400px;
+      position: relative;
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+    
+    &__send-icon {
+      height: 40px;
+      left: 20px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+    }
+
+    &__price {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

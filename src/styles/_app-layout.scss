@@ -1,0 +1,48 @@
+.app-layout {
+  display: grid;
+  grid-template: 
+  "logo" auto
+  "menu" auto
+  "side" auto
+  "main" auto / 1fr;
+  min-height: 100vh;
+ 
+  &__logo, &__sidebar {
+    text-align: center;
+  }
+
+  &__logo {
+    grid-area: logo;
+    padding: 10px;
+
+    img {
+      max-width: 130px;
+      width: 100%;
+    }
+  }
+
+  &__menu {
+    align-self: start;
+    grid-area: menu;
+  }
+
+  &__sidebar {
+    grid-area: side;
+  }
+
+  &__main {
+    grid-area: main;
+    padding: 20px;
+  }
+
+  @media screen and (min-width: 1100px) {
+    grid-template:
+    ".... logo menu ...." auto
+    ".... side main ...." 1fr / calc(50vw - 800px) 400px 1fr calc(50vw - 800px);
+
+    &__main {
+      padding: 20px 50px;
+    }
+  
+  }
+}

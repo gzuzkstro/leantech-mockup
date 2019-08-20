@@ -1,0 +1,44 @@
+.navigation-bar {
+  display: flex;
+  width: 100%;
+
+  &__item {
+    color: #383838;
+    flex: 1 50px;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 250ms;
+
+    &:hover {
+      background: #193948;
+      color: #fff;
+    }
+  }
+
+  &__icon {
+    display: block;
+    fill: currentColor;
+    height: 20px;
+    margin: 0 auto 10px;
+    width: 20px;
+  }
+
+  &__label {
+    display: none;
+  }
+
+  @media screen and (min-width: 600px) {
+    &__item {
+      padding: 10px;
+    }
+    &__icon {
+      height: 50px;
+      width: 50px;
+    }
+
+    &__label {
+      display: block;
+    }
+  }
+}

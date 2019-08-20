@@ -1,0 +1,54 @@
+.home {
+  display: grid;
+  grid-template:
+    "fav sch" auto
+    "itm itm" auto
+    "add add" auto/ 1fr 1fr;
+  height: 100%;
+  position: relative;
+
+  &__favorite {
+    grid-area: fav;
+  }
+
+  &__search {
+    grid-area: sch;
+  }
+
+  &__items {
+    grid-area: itm;
+  }
+
+  &__add-item {
+    background: #ee8d38;
+    border-radius: 50%;
+    bottom: 20px;
+    color: #fff;
+    display: block;
+    grid-area: add;
+    height: 100px;
+    margin: 20px 0 20px auto ;
+    padding: 25px;
+    position: sticky;
+    transition: background-color 250ms, transform 250ms;
+    width: 100px;
+
+    &:hover, &:active, &:focus {
+      background: lighten(#ee8d38, 5%);
+      color: #fff;
+      transform: rotate(15deg);
+    }
+  }
+
+  &__add-item-icon {
+    fill: currentColor;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__items {
+    display: grid;
+    grid-gap: 40px;
+    padding: 40px 0;
+  }
+}
